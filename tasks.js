@@ -2,19 +2,19 @@ const tasks = [
   {
     id: 1,
     name: "grocery store",
-    pryority: "high",
+    priority: "high",
     done: false,
   },
   {
     id: 2,
     name: "solving the mini project",
-    pryority: "high",
+    priority: "high",
     done: false,
   },
   {
     id: 3,
     name: "going to the gym",
-    pryority: "low",
+    priority: "low",
     done: false,
   },
 ];
