@@ -7,8 +7,8 @@ const bodyParser = require("body-parser");
 const taskRoutes = require("./routes/tasks");
 
 app.use(cors());
-app.use("/tasks", taskRoutes);
 app.use(bodyParser.json());
+app.use("/tasks", taskRoutes);
 
 app.listen(8000, () => {
   console.log("The application is running on localhost:8000");

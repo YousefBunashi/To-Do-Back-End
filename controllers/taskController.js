@@ -19,15 +19,15 @@ exports.taskUpdate = (req, res) => {
     for (const key in req.body) foundTask[key] = req.body[key];
     res.status(204).end();
   } else {
-    res.status(404).json({ message: "task not found" });
+    res.status(404).json({ message: "Task not found" });
   }
 };
 
 exports.taskDelete = (req, res) => {
   const { taskId } = req.params;
-  const foundTask = task.find((task) => task.id === +taskId);
+  const foundTask = tasks.find((task) => task.id === +taskId);
   if (foundTask) {
-    task = task.filter((task) => task !== foundTask);
+    tasks = tasks.filter((task) => task !== foundTask);
     res.status(204).end();
   } else {
     res.status(404).json({ message: "Task not found" });
